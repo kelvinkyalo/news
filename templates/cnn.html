@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome to CNN News Highlights</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    </head>
+<body>
+    <div class="container-fluid" style="background-image: url('../static/Images/home.jpg'); background-attachment: fixed; background-size: cover;">
+        <br>
+        <div style="border:2px dashed gold;background-color: rgb(12, 12, 66); opacity: .9;">
+            <h1 style="font-family:monospace; font-weight: 600; font-size:60px; color:red;">CNN  BREAKING NEWS</h1>
+            <hr>
+        </div>
+        <div class="container text-center" style="border:black; height: 100px;">
+            <row class="col-md-12">
+                <button class="btn btn-outline-danger" type="button">
+                    <a style="color: black; font-weight: bold; text-decoration: none;" href="{{url_for('bbcNews')}}">
+                        BBC NEWS REPORT
+                    </a>
+                </button>
+                <button class="btn btn-outline-success" type="button">
+                    <a style="color: black; font-weight: bold; text-decoration: none;" href="{{url_for('foxNews')}}">
+                        FOX NEWS REPORT</a>
+                </button>
+                <button class="btn btn-outline-primary" type="button">
+                    <a style="color: black; font-weight: bold; text-decoration: none;" href="{{url_for('cnnNews')}}">
+                        CNN NEWS REPORT
+                    </a>
+                </button>
+                <button class="btn btn-outline-info" type="button">
+                    <a style="color: black; font-weight: bold; text-decoration: none;" href="{{url_for('mtvNews')}}">
+                        MTV NEWS REPORT
+                    </a>
+                </button>
+            </row>
+        </div>
+        <div class="container text-center">
+            <row class="col-md-12">
+                {% for pubAt, author, news, desc, url in context %}
+                    <div class="card bg-primary">
+                        <div class="card-body text-center">
+                        <h6  class="card-text">{{pubAt}}</h6>
+                            <h4>{{author}}: {{news}}</h4>
+                            <p style="color:white;"> {{desc}} </p>
+                            <button type="button" class="btn btn-outline-danger">
+                                <a style="color:white;" href="{{url}}" target="_blank">                                    continue reading....
+                                </a>
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </row>
+       </div>
+    </div>
+</body>
+</html>

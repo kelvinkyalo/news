@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>News Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid" style="background-image: url('../static/Images/home.jpg'); background-size: cover;
+     height: 675px;">
+        <div class="container text-center" style="padding: 40px; background-color: black; opacity: .7; 
+        height: 675px; width: 70%;">
+            <h1 style="margin-top: 20%;font-family: monospace; color: red;
+             font-size: 100px;">
+                BREAKING NEWS
+            </h1>
+
+            <br>
+            <hr>
+            <button class="btn btn-outline-danger" type="button">
+                <a style="color: white;text-decoration: none;" href="{{url_for('bbcNews')}}">
+                    BBC NEWS REPORT
+                </a>
+            </button>
+            <button class="btn btn-outline-success" type="button">
+                <a style="color: white;text-decoration: none;" href="{{url_for('foxNews')}}">
+                    FOX NEWS REPORT</a>
+            </button>
+            <button class="btn btn-outline-primary" type="button">
+                <a style="color: white;text-decoration: none;" href="{{url_for('cnnNews')}}">
+                    CNN NEWS REPORT
+                </a>
+            </button>
+            <button class="btn btn-outline-info" type="button">
+                <a style="color: white;text-decoration: none;" href="{{url_for('mtvNews')}}">
+                    MTV NEWS REPORT
+                </a>
+            </button>
+        </div>
+    </div>
+</body>
+
+</html>
