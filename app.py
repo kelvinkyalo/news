@@ -11,7 +11,7 @@ def index():
 
 @app.route('/bbc')
 def bbcNews():
-    newsapi = NewsApiClient(api_key='3bf0db982cf4456b88151b7d2546f619')
+    newsapi = NewsApiClient(api_key='446128eaa5424a2db55070f0c3651dbc')
     topheadlines = newsapi.get_top_headlines(sources="bbc-news")
 
     articles = topheadlines['articles']
@@ -39,7 +39,7 @@ def bbcNews():
 
 @app.route('/fox')
 def foxNews():
-    newsapi = NewsApiClient(api_key='3bf0db982cf4456b88151b7d2546f619')
+    newsapi = NewsApiClient(api_key='446128eaa5424a2db55070f0c3651dbc')
     topheadlines = newsapi.get_top_headlines(sources="fox-news")
 
     articles = topheadlines['articles']
@@ -66,7 +66,7 @@ def foxNews():
 
 @app.route('/cnn')
 def cnnNews():
-    newsapi = NewsApiClient(api_key='3bf0db982cf4456b88151b7d2546f619')
+    newsapi = NewsApiClient(api_key='446128eaa5424a2db55070f0c3651dbc')
     topheadlines = newsapi.get_top_headlines(sources="cnn")
 
     articles = topheadlines['articles']
@@ -93,7 +93,7 @@ def cnnNews():
 
 @app.route('/mtv')
 def mtvNews():
-    newsapi = NewsApiClient(api_key='3bf0db982cf4456b88151b7d2546f619')
+    newsapi = NewsApiClient(api_key='446128eaa5424a2db55070f0c3651dbc')
     topheadlines = newsapi.get_top_headlines(sources="mtv-news")
 
     articles = topheadlines['articles']
